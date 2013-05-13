@@ -4,34 +4,35 @@ import java.io.File;
 import java.io.IOException;
 
 public class Example {
+	
 
 	public static void main(String[] args) throws IOException {
-		System.out.println("¹ØÓÚtestFile.txtÎÄ¼şµÄ²Ù×÷...");
+		System.out.println("å…³äºtestFile.txtæ–‡ä»¶çš„æ“ä½œ...");
 		File file = new File("testFile.txt");
 
-		System.out.println("Èç¹û´æÔÚÔòÉ¾³ı...");
+		System.out.println("å¦‚æœå­˜åœ¨åˆ™åˆ é™¤...");
 		file.deleteOnExit();
 
-		System.out.println("ÊÇ·ñ´æÔÚ£º" + file.exists());
-		System.out.println("´´½¨ĞÂÎÄ¼şÊÇ·ñ³É¹¦£º" + file.createNewFile());
-		System.out.println("ÊÇ·ñ´æÔÚ£º" + file.exists());
+		System.out.println("æ˜¯å¦å­˜åœ¨ï¼š" + file.exists());
+		System.out.println("åˆ›å»ºæ–°æ–‡ä»¶æ˜¯å¦æˆåŠŸï¼š" + file.createNewFile());
+		System.out.println("æ˜¯å¦å­˜åœ¨ï¼š" + file.exists());
 
-		System.out.println("¾ø¶ÔÂ·¾¶£º" + file.getAbsolutePath());
-		System.out.println("ÊÇ·ñÊÇÎÄ¼ş£º" + file.isFile());
-		System.out.println("ÊÇ·ñÊÇÎÄ¼ş¼Ğ£º" + file.isDirectory());
+		System.out.println("ç»å¯¹è·¯å¾„ï¼š" + file.getAbsolutePath());
+		System.out.println("æ˜¯å¦æ˜¯æ–‡ä»¶ï¼š" + file.isFile());
+		System.out.println("æ˜¯å¦æ˜¯æ–‡ä»¶å¤¹ï¼š" + file.isDirectory());
 
-		System.out.println("ÊÇ·ñ¿É¶Á£º" + file.canRead());
-		System.out.println("ÊÇ·ñ¿ÉĞ´£º" + file.canWrite());
-		System.out.println("ÊÇ·ñ¿ÉÖ´ĞĞ£º" + file.canExecute());
+		System.out.println("æ˜¯å¦å¯è¯»ï¼š" + file.canRead());
+		System.out.println("æ˜¯å¦å¯å†™ï¼š" + file.canWrite());
+		System.out.println("æ˜¯å¦å¯æ‰§è¡Œï¼š" + file.canExecute());
 
 		File file2 = new File("testFile2.txt");
-		System.out.println("ÖØÃüÃûÊÇ·ñ³É¹¦£º" + file.renameTo(file2));
+		System.out.println("é‡å‘½åæ˜¯å¦æˆåŠŸï¼š" + file.renameTo(file2));
 
-		System.out.println("É¾³ıÎÄ¼şÊÇ·ñ³É¹¦£º" + file2.delete());
+		System.out.println("åˆ é™¤æ–‡ä»¶æ˜¯å¦æˆåŠŸï¼š" + file2.delete());
 
-		System.out.println("\nÎÄ¼ş¼ĞÏà¹Ø²Ù×÷£º");
+		System.out.println("\næ–‡ä»¶å¤¹ç›¸å…³æ“ä½œï¼š");
 		File dir = new File(".");
-		System.out.println("ÎÄ¼ş¼Ğ£º" + dir.getCanonicalPath());
+		System.out.println("æ–‡ä»¶å¤¹ï¼š" + dir.getCanonicalPath());
 		String[] fileList = dir.list();
 		for (String fileName : fileList) {
 			System.out.println("  " + fileName);
